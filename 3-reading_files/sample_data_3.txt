@@ -1,0 +1,9 @@
+Name,Index,Age
+Foo,54,20
+Bar,66,30
+John,82,35
+Doe,2,19
+Dee,23,27
+Viz,57,22
+Lut,60,14
+Moor,45,23
