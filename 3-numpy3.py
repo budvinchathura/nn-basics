@@ -14,5 +14,10 @@ print(narr1.mean())        #overall mean
 print(np.median(narr1,axis =0))        #column wise median
 print(np.median(narr1,axis = 1))        #row wise median
 
-print(np.percentile(narr1,50));
+print(np.std(narr1))                #overall standard deviation
+print(np.std(narr1,axis=1))         #row wise std
+print(np.percentile(arr1,50,axis=1))        #row wise 50th percentiles
+print(np.percentile(arr1,25,axis=0))        #column wise 25th percentiles
+
+
 

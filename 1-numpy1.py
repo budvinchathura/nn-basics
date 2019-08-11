@@ -1,15 +1,20 @@
-print("hello")
 import numpy as np
 
 arr1 = [1,2,3,4]
+print("arr1 : ")
 print(arr1)
 
 narr1 = np.array(arr1)          #normal array to numpy array
-print(type(narr1))
+print()
+print("type of narr1 : "+ str(type(narr1)))
 
+print()
+print("narr1:")
 print(narr1)
+print("narr1.shape:")
 print(narr1.shape)              #dimension of the numpy array as a tuple
 
+print()
 narr2 = np.zeros((2,2,2))       #fill all zeros according to the given dimension
 print(narr2)
 print(narr2.shape)
