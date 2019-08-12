@@ -31,8 +31,8 @@ print("initial weights:  w = {}     b = {}".format(w_init,b_init))
 
 
 # batch_size is Number of samples per gradient update
-# epochs is an iteration over the entire x and y data provided
-model.fit(x,y,batch_size = 1,epochs=50,shuffle=False)
+# epoch is an iteration over the entire x and y data provided
+model.fit(x,y,batch_size = 1,epochs=20,shuffle=False)
 weights = model.layers[0].get_weights()
 w_final = weights[0][0][0]
 b_final = weights[1][0]
