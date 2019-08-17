@@ -25,7 +25,8 @@ train_data.loc[train_data['y'].isnull(),'y'] = mean_y
 train_data.drop_duplicates(['x'],keep='first',inplace=True)
 train_data.sort_values(by=['x'],inplace=True)
 
-train_data = train_data[(train_data['y']>0) & (train_data['x']>10) & (train_data['x']<100) ]
+train_data = train_data[(train_data['y']>0) & (train_data['x']<300)]
+# train_data = train_data[(train_data['y']>0) & (train_data['x']>10)  ]
 
 print(train_data)
 
