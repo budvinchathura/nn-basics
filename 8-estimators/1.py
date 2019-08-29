@@ -6,6 +6,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
+
+
 #%%
 
 boston_data = datasets.load_boston()
@@ -54,7 +56,7 @@ categorical_features = [tf.feature_column.categorical_column_with_vocabulary_lis
     key=column, vocabulary_list=features[column].unique()) for column in categorical_columns]
 
 
-linear_features = numeric_features 
+linear_features = numeric_features + categorical_features
 
 #%%
 # use builtin input functions
@@ -68,7 +70,10 @@ input_fn_eval = tf.estimator.inputs.pandas_input_fn(x = x_test,y=y_test,batch_si
 #%%
 # instantiate and run model
 # model_dir location to save the model
-linear_regressor = tf.estimator.LinearRegressor(feature_columns = linear_features,model_dir = "8-estimators/save_data_for_1.py_")
+
+# tf.reset_default_graph()
+
+linear_regressor = tf.estimator.LinearRegressor(feature_columns = linear_features,model_dir = "8-estimators/save_data_for_1.py_2")
 linear_regressor.train(input_fn = input_fn_train,steps = NUM_STEPS)
 
 #%%
